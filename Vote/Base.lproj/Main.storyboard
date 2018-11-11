@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wk1-2w-guH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uBT-9N-IQP">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -13,7 +13,7 @@
         <!--Vote-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Vote" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="VoteViewController" customModule="Vote" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -99,35 +99,58 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Z73-7I-aPq">
                                 <rect key="frame" x="16" y="80" width="343" height="571"/>
                                 <subviews>
-                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wWV-eQ-HA8">
-                                        <rect key="frame" x="37" y="0.0" width="269.5" height="269.5"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NoL-8T-DA7">
+                                        <rect key="frame" x="53.5" y="0.0" width="236" height="236"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wWV-eQ-HA8">
+                                                <rect key="frame" x="0.0" y="0.0" width="236" height="236"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="46K-lF-T55" appends="YES" id="vc3-vD-Anb"/>
+                                                </connections>
+                                            </imageView>
+                                        </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <gestureRecognizers/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="wWV-eQ-HA8" secondAttribute="height" multiplier="1:1" id="GtF-Bo-eOV"/>
+                                            <constraint firstItem="wWV-eQ-HA8" firstAttribute="top" secondItem="NoL-8T-DA7" secondAttribute="top" id="1qJ-rV-gxg"/>
+                                            <constraint firstItem="wWV-eQ-HA8" firstAttribute="leading" secondItem="NoL-8T-DA7" secondAttribute="leading" id="GMV-dg-nh5"/>
+                                            <constraint firstAttribute="width" secondItem="NoL-8T-DA7" secondAttribute="height" multiplier="1:1" id="VlZ-lI-hYj"/>
+                                            <constraint firstAttribute="bottom" secondItem="wWV-eQ-HA8" secondAttribute="bottom" id="lxL-o2-mYj"/>
+                                            <constraint firstAttribute="trailing" secondItem="wWV-eQ-HA8" secondAttribute="trailing" id="neX-NW-Cu8"/>
                                         </constraints>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="46K-lF-T55" appends="YES" id="vc3-vD-Anb"/>
-                                        </connections>
-                                    </imageView>
-                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Dez-KQ-a2b">
-                                        <rect key="frame" x="37" y="285.5" width="269.5" height="269.5"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h4e-rJ-E9l">
+                                        <rect key="frame" x="53.5" y="252" width="236" height="236"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Dez-KQ-a2b">
+                                                <rect key="frame" x="0.0" y="0.0" width="236" height="236"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="0c3-ch-t3o" appends="YES" id="FlJ-oR-iuv"/>
+                                                </connections>
+                                            </imageView>
+                                        </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <gestureRecognizers/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="Dez-KQ-a2b" secondAttribute="height" multiplier="1:1" id="qyB-AQ-M97"/>
+                                            <constraint firstAttribute="width" secondItem="h4e-rJ-E9l" secondAttribute="height" multiplier="1:1" id="1Bw-Tc-mkC"/>
+                                            <constraint firstItem="Dez-KQ-a2b" firstAttribute="leading" secondItem="h4e-rJ-E9l" secondAttribute="leading" id="FGZ-pj-p8D"/>
+                                            <constraint firstAttribute="trailing" secondItem="Dez-KQ-a2b" secondAttribute="trailing" id="PIa-Qu-fZD"/>
+                                            <constraint firstAttribute="bottom" secondItem="Dez-KQ-a2b" secondAttribute="bottom" id="y0E-du-zQe"/>
+                                            <constraint firstItem="Dez-KQ-a2b" firstAttribute="top" secondItem="h4e-rJ-E9l" secondAttribute="top" id="zPx-5E-SCZ"/>
                                         </constraints>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="0c3-ch-t3o" appends="YES" id="FlJ-oR-iuv"/>
-                                        </connections>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eeG-am-Q2U">
-                                        <rect key="frame" x="147" y="571" width="49" height="0.0"/>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eeG-am-Q2U">
+                                        <rect key="frame" x="147" y="504" width="49" height="67"/>
                                         <state key="normal" title="Submit"/>
+                                        <connections>
+                                            <action selector="submitButtonTapped:" destination="yq7-hP-KO6" eventType="touchUpInside" id="PQM-AL-iAC"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="Dez-KQ-a2b" firstAttribute="height" secondItem="wWV-eQ-HA8" secondAttribute="height" id="kqe-6i-a8c"/>
+                                    <constraint firstItem="h4e-rJ-E9l" firstAttribute="height" secondItem="NoL-8T-DA7" secondAttribute="height" id="phc-ME-4g9"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -144,8 +167,10 @@
                         <viewLayoutGuide key="safeArea" id="2sW-LL-3el"/>
                     </view>
                     <connections>
+                        <outlet property="bottomCard" destination="h4e-rJ-E9l" id="p0x-y4-0WU"/>
                         <outlet property="bottomImageView" destination="Dez-KQ-a2b" id="T4d-LM-8H8"/>
                         <outlet property="navBar" destination="JQR-9S-gYy" id="bVi-nV-r2B"/>
+                        <outlet property="topCard" destination="NoL-8T-DA7" id="t0F-qw-2Xq"/>
                         <outlet property="topImageView" destination="wWV-eQ-HA8" id="yvG-mM-EPc"/>
                     </connections>
                 </viewController>
@@ -162,6 +187,41 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1716" y="23"/>
+        </scene>
+        <!--Sign In View Controller-->
+        <scene sceneID="4mE-N3-5K3">
+            <objects>
+                <viewController id="uBT-9N-IQP" customClass="SignInViewController" customModule="Vote" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mPe-aM-5k4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vote!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dlj-kF-6UM">
+                                <rect key="frame" x="138" y="306.5" width="99" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="4nT-ee-H6v">
+                                <rect key="frame" x="177.5" y="368.5" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4nT-ee-H6v" firstAttribute="centerX" secondItem="mPe-aM-5k4" secondAttribute="centerX" id="7lU-qT-8Lw"/>
+                            <constraint firstItem="4nT-ee-H6v" firstAttribute="top" secondItem="Dlj-kF-6UM" secondAttribute="bottom" constant="8" id="B1Z-bu-6B5"/>
+                            <constraint firstItem="Dlj-kF-6UM" firstAttribute="centerX" secondItem="mPe-aM-5k4" secondAttribute="centerX" id="Uob-Ip-Xf2"/>
+                            <constraint firstItem="Dlj-kF-6UM" firstAttribute="centerY" secondItem="mPe-aM-5k4" secondAttribute="centerY" id="mAF-L6-49z"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="XVh-xi-3Ko"/>
+                    </view>
+                    <connections>
+                        <segue destination="wk1-2w-guH" kind="show" identifier="signInSegue" id="y9W-Ly-gcN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qVS-D7-cPi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-841" y="684"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jkM-bU-SaL">
