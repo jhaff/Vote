@@ -56,6 +56,9 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="GrW-Ge-l1j">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="yq7-hP-KO6" kind="presentation" id="qOM-oL-s4g"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -66,6 +69,81 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="980" y="25.637181409295355"/>
+        </scene>
+        <!--Add Poll View Controller-->
+        <scene sceneID="9tM-Lw-5Cv">
+            <objects>
+                <viewController id="yq7-hP-KO6" customClass="AddPollViewController" customModule="Vote" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5FG-Pq-uHl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JQR-9S-gYy">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="538-1V-QJt"/>
+                                </constraints>
+                                <color key="barTintColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <navigationItem title="New Poll" id="A1Z-7G-gQl">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="4Px-tg-YeH">
+                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <action selector="cancelButtonPressed:" destination="yq7-hP-KO6" id="H5P-Re-dED"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Z73-7I-aPq">
+                                <rect key="frame" x="16" y="80" width="343" height="571"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wWV-eQ-HA8">
+                                        <rect key="frame" x="37" y="0.0" width="269.5" height="269.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="wWV-eQ-HA8" secondAttribute="height" multiplier="1:1" id="GtF-Bo-eOV"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Dez-KQ-a2b">
+                                        <rect key="frame" x="37" y="285.5" width="269.5" height="269.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Dez-KQ-a2b" secondAttribute="height" multiplier="1:1" id="qyB-AQ-M97"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eeG-am-Q2U">
+                                        <rect key="frame" x="147" y="571" width="49" height="0.0"/>
+                                        <state key="normal" title="Submit"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Dez-KQ-a2b" firstAttribute="height" secondItem="wWV-eQ-HA8" secondAttribute="height" id="kqe-6i-a8c"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Z73-7I-aPq" firstAttribute="top" secondItem="JQR-9S-gYy" secondAttribute="bottom" constant="16" id="0iZ-Sb-JhW"/>
+                            <constraint firstItem="2sW-LL-3el" firstAttribute="trailing" secondItem="Z73-7I-aPq" secondAttribute="trailing" constant="16" id="7on-9v-adI"/>
+                            <constraint firstItem="2sW-LL-3el" firstAttribute="top" secondItem="JQR-9S-gYy" secondAttribute="top" id="DTV-aE-LYd"/>
+                            <constraint firstItem="JQR-9S-gYy" firstAttribute="leading" secondItem="2sW-LL-3el" secondAttribute="leading" id="Osd-oq-uve"/>
+                            <constraint firstItem="JQR-9S-gYy" firstAttribute="trailing" secondItem="2sW-LL-3el" secondAttribute="trailing" id="byd-pU-Vmh"/>
+                            <constraint firstItem="Z73-7I-aPq" firstAttribute="leading" secondItem="2sW-LL-3el" secondAttribute="leading" constant="16" id="chj-IO-Pn3"/>
+                            <constraint firstItem="2sW-LL-3el" firstAttribute="bottom" secondItem="Z73-7I-aPq" secondAttribute="bottom" constant="16" id="uTR-Ms-TZp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2sW-LL-3el"/>
+                    </view>
+                    <connections>
+                        <outlet property="bottomImageView" destination="Dez-KQ-a2b" id="T4d-LM-8H8"/>
+                        <outlet property="navBar" destination="JQR-9S-gYy" id="bVi-nV-r2B"/>
+                        <outlet property="topImageView" destination="wWV-eQ-HA8" id="yvG-mM-EPc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mnT-kC-93k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1716" y="23"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jkM-bU-SaL">

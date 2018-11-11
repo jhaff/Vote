@@ -15,6 +15,7 @@
 		350F54B02197D3ED00C87AC9 /* VoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350F54AF2197D3ED00C87AC9 /* VoteTests.swift */; };
 		350F54BB2197D3ED00C87AC9 /* VoteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350F54BA2197D3ED00C87AC9 /* VoteUITests.swift */; };
 		350F54C92197E25100C87AC9 /* CALayer+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350F54C82197E25100C87AC9 /* CALayer+Shadow.swift */; };
+		350F54CD2197F24800C87AC9 /* AddPollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350F54CC2197F24800C87AC9 /* AddPollViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		350F54BA2197D3ED00C87AC9 /* VoteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteUITests.swift; sourceTree = "<group>"; };
 		350F54BC2197D3ED00C87AC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		350F54C82197E25100C87AC9 /* CALayer+Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Shadow.swift"; sourceTree = "<group>"; };
+		350F54CC2197F24800C87AC9 /* AddPollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPollViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				350F54A12197D3ED00C87AC9 /* Assets.xcassets */,
 				350F54A32197D3ED00C87AC9 /* LaunchScreen.storyboard */,
 				350F54A62197D3ED00C87AC9 /* Info.plist */,
+				350F54CC2197F24800C87AC9 /* AddPollViewController.swift */,
 			);
 			path = Vote;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				350F54CD2197F24800C87AC9 /* AddPollViewController.swift in Sources */,
 				350F549D2197D3EA00C87AC9 /* ViewController.swift in Sources */,
 				350F549B2197D3EA00C87AC9 /* AppDelegate.swift in Sources */,
 				350F54C92197E25100C87AC9 /* CALayer+Shadow.swift in Sources */,
