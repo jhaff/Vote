@@ -99,19 +99,27 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Z73-7I-aPq">
                                 <rect key="frame" x="16" y="80" width="343" height="571"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wWV-eQ-HA8">
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wWV-eQ-HA8">
                                         <rect key="frame" x="37" y="0.0" width="269.5" height="269.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="wWV-eQ-HA8" secondAttribute="height" multiplier="1:1" id="GtF-Bo-eOV"/>
                                         </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="46K-lF-T55" appends="YES" id="vc3-vD-Anb"/>
+                                        </connections>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Dez-KQ-a2b">
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Dez-KQ-a2b">
                                         <rect key="frame" x="37" y="285.5" width="269.5" height="269.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Dez-KQ-a2b" secondAttribute="height" multiplier="1:1" id="qyB-AQ-M97"/>
                                         </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="0c3-ch-t3o" appends="YES" id="FlJ-oR-iuv"/>
+                                        </connections>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eeG-am-Q2U">
                                         <rect key="frame" x="147" y="571" width="49" height="0.0"/>
@@ -142,6 +150,16 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mnT-kC-93k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="46K-lF-T55" userLabel="Top Image Gesture Recognizer">
+                    <connections>
+                        <action selector="topImageTapped:" destination="yq7-hP-KO6" id="JmE-uh-qik"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="0c3-ch-t3o" userLabel="Bottom Image Gesture Recognizer">
+                    <connections>
+                        <action selector="bottomImageTapped:" destination="yq7-hP-KO6" id="rB5-yn-Qcj"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1716" y="23"/>
         </scene>
