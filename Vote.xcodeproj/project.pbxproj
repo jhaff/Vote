@@ -14,6 +14,7 @@
 		350F54A52197D3ED00C87AC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 350F54A32197D3ED00C87AC9 /* LaunchScreen.storyboard */; };
 		350F54B02197D3ED00C87AC9 /* VoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350F54AF2197D3ED00C87AC9 /* VoteTests.swift */; };
 		350F54BB2197D3ED00C87AC9 /* VoteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350F54BA2197D3ED00C87AC9 /* VoteUITests.swift */; };
+		350F54C92197E25100C87AC9 /* CALayer+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350F54C82197E25100C87AC9 /* CALayer+Shadow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		350F54B62197D3ED00C87AC9 /* VoteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VoteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		350F54BA2197D3ED00C87AC9 /* VoteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteUITests.swift; sourceTree = "<group>"; };
 		350F54BC2197D3ED00C87AC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		350F54C82197E25100C87AC9 /* CALayer+Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Shadow.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				350F549A2197D3EA00C87AC9 /* AppDelegate.swift */,
 				350F549C2197D3EA00C87AC9 /* ViewController.swift */,
+				350F54C82197E25100C87AC9 /* CALayer+Shadow.swift */,
 				350F549E2197D3EA00C87AC9 /* Main.storyboard */,
 				350F54A12197D3ED00C87AC9 /* Assets.xcassets */,
 				350F54A32197D3ED00C87AC9 /* LaunchScreen.storyboard */,
@@ -258,6 +261,7 @@
 			files = (
 				350F549D2197D3EA00C87AC9 /* ViewController.swift in Sources */,
 				350F549B2197D3EA00C87AC9 /* AppDelegate.swift in Sources */,
+				350F54C92197E25100C87AC9 /* CALayer+Shadow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
