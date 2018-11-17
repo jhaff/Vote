@@ -19,6 +19,11 @@
 		350F54CF2198B1F000C87AC9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 350F54CE2198B1F000C87AC9 /* GoogleService-Info.plist */; };
 		350F54D12198B6D900C87AC9 /* VoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350F54D02198B6D900C87AC9 /* VoteViewController.swift */; };
 		350F54D52198B72E00C87AC9 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350F54D42198B72E00C87AC9 /* SignInViewController.swift */; };
+		359F62C121A0B50C001DE596 /* Encodable+Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359F62C021A0B50C001DE596 /* Encodable+Dictionary.swift */; };
+		359F62C321A0B566001DE596 /* BasicError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359F62C221A0B566001DE596 /* BasicError.swift */; };
+		359F62C521A0B804001DE596 /* WritableFirestoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359F62C421A0B804001DE596 /* WritableFirestoreModel.swift */; };
+		359F62C721A0B834001DE596 /* FirestoreCollection+AddDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359F62C621A0B834001DE596 /* FirestoreCollection+AddDocument.swift */; };
+		35AB6A0821A0B13800E425C2 /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AB6A0721A0B13800E425C2 /* Collection.swift */; };
 		35E9073F2198BBC00034B25F /* Poll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E9073E2198BBC00034B25F /* Poll.swift */; };
 		48D472A2F2F8E750B5D982E4 /* Pods_VoteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CC3D70341D19E2E9795E871 /* Pods_VoteTests.framework */; };
 		BFFB62CA3CDD14AD78CB87EB /* Pods_Vote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70A9B236D44DB037BB05CF7D /* Pods_Vote.framework */; };
@@ -62,6 +67,11 @@
 		350F54CE2198B1F000C87AC9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		350F54D02198B6D900C87AC9 /* VoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoteViewController.swift; sourceTree = "<group>"; };
 		350F54D42198B72E00C87AC9 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		359F62C021A0B50C001DE596 /* Encodable+Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Dictionary.swift"; sourceTree = "<group>"; };
+		359F62C221A0B566001DE596 /* BasicError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicError.swift; sourceTree = "<group>"; };
+		359F62C421A0B804001DE596 /* WritableFirestoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritableFirestoreModel.swift; sourceTree = "<group>"; };
+		359F62C621A0B834001DE596 /* FirestoreCollection+AddDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FirestoreCollection+AddDocument.swift"; sourceTree = "<group>"; };
+		35AB6A0721A0B13800E425C2 /* Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
 		35BF74A7F56FF5A9D396EB08 /* Pods-VoteUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoteUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VoteUITests/Pods-VoteUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		35E9073E2198BBC00034B25F /* Poll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Poll.swift; sourceTree = "<group>"; };
 		3BB030E485B33F36EA185626 /* Pods-Vote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vote.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Vote/Pods-Vote.debug.xcconfig"; sourceTree = "<group>"; };
@@ -146,6 +156,8 @@
 				350F54A32197D3ED00C87AC9 /* LaunchScreen.storyboard */,
 				350F54A62197D3ED00C87AC9 /* Info.plist */,
 				350F54CE2198B1F000C87AC9 /* GoogleService-Info.plist */,
+				35AB6A0721A0B13800E425C2 /* Collection.swift */,
+				359F62C221A0B566001DE596 /* BasicError.swift */,
 			);
 			path = Vote;
 			sourceTree = "<group>";
@@ -182,6 +194,8 @@
 			isa = PBXGroup;
 			children = (
 				350F54C82197E25100C87AC9 /* CALayer+Shadow.swift */,
+				359F62C021A0B50C001DE596 /* Encodable+Dictionary.swift */,
+				359F62C621A0B834001DE596 /* FirestoreCollection+AddDocument.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -190,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				35E9073E2198BBC00034B25F /* Poll.swift */,
+				359F62C421A0B804001DE596 /* WritableFirestoreModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -367,8 +382,15 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Vote/Pods-Vote-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -376,8 +398,15 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -440,8 +469,13 @@
 				350F54D12198B6D900C87AC9 /* VoteViewController.swift in Sources */,
 				350F54CD2197F24800C87AC9 /* AddPollViewController.swift in Sources */,
 				350F549B2197D3EA00C87AC9 /* AppDelegate.swift in Sources */,
+				359F62C121A0B50C001DE596 /* Encodable+Dictionary.swift in Sources */,
+				359F62C321A0B566001DE596 /* BasicError.swift in Sources */,
 				350F54D52198B72E00C87AC9 /* SignInViewController.swift in Sources */,
+				359F62C721A0B834001DE596 /* FirestoreCollection+AddDocument.swift in Sources */,
 				35E9073F2198BBC00034B25F /* Poll.swift in Sources */,
+				359F62C521A0B804001DE596 /* WritableFirestoreModel.swift in Sources */,
+				35AB6A0821A0B13800E425C2 /* Collection.swift in Sources */,
 				350F54C92197E25100C87AC9 /* CALayer+Shadow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

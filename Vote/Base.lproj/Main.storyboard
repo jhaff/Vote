@@ -170,6 +170,7 @@
                         <outlet property="bottomCard" destination="h4e-rJ-E9l" id="p0x-y4-0WU"/>
                         <outlet property="bottomImageView" destination="Dez-KQ-a2b" id="T4d-LM-8H8"/>
                         <outlet property="navBar" destination="JQR-9S-gYy" id="bVi-nV-r2B"/>
+                        <outlet property="submitButton" destination="eeG-am-Q2U" id="zci-Hg-XZc"/>
                         <outlet property="topCard" destination="NoL-8T-DA7" id="t0F-qw-2Xq"/>
                         <outlet property="topImageView" destination="wWV-eQ-HA8" id="yvG-mM-EPc"/>
                     </connections>

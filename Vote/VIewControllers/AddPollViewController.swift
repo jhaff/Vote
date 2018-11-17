@@ -21,24 +21,24 @@ class AddPollViewController: UIViewController {
     @IBOutlet weak var topCard: UIView!
     @IBOutlet weak var bottomCard: UIView!
     
+    @IBOutlet weak var submitButton: UIButton!
+    
     private var selectedImage: UIImage?
     private var selectedImageView: UIImageView?
+    private let compressionRatio: CGFloat = 0.5
     
     // MARK: Actions
     
     @IBAction func submitButtonTapped(_ sender: UIButton) {
-        guard let topImageData = topImageView.image?.jpegData(compressionQuality: 1), let bottomImageData = bottomImageView.image?.jpegData(compressionQuality: 1) else {
+        submitButton.isEnabled = false
+        guard let topImageData = topImageView.image?.jpegData(compressionQuality: compressionRatio), let bottomImageData = bottomImageView.image?.jpegData(compressionQuality: compressionRatio) else {
             print("images not selected")
             return
         }
-        let pollRef = Database.database().reference().child("polls").childByAutoId()
+        var poll = CreatablePoll(userId: Auth.auth().currentUser!.uid, displayInFeed: false)
+        let pollRef = Collection.polls.ref.addDocument(model: poll)
 
-        guard let pollKey = pollRef.key else {
-            print("no poll key")
-            return
-        }
-        
-        let photosRootRef = Storage.storage().reference().child("photos/\(pollKey)")
+        let photosRootRef = Storage.storage().reference().child("photos/\(pollRef.documentID)")
         let topPhotoRef = photosRootRef.child("top.jpg")
         let bottomPhotoRef = photosRootRef.child("bottom.jpg")
         
@@ -71,13 +71,13 @@ class AddPollViewController: UIViewController {
                 return
             }
         }
-        
+
         dispatchGroup.notify(queue: .main) {
             if uploadError != nil {
                 let alertController = UIAlertController(title: "Error!", message: "Unable to upload images, please try again 😅", preferredStyle: .alert)
                 alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
                 self.present(alertController, animated: true, completion: nil)
-                
+
                 bottomPhotoRef.delete(completion: { error in
                     if let error = error {
                         print(error)
@@ -88,17 +88,16 @@ class AddPollViewController: UIViewController {
                         print(error)
                     }
                 })
+                pollRef.delete()
+                self.submitButton.isEnabled = true
             } else {
                 self.dismiss(animated: true, completion: nil)
-                pollRef.setValue(["displayInFeed": true,
-                                  "createdAtDate": ServerValue.timestamp(),
-                                  "userId": Auth.auth().currentUser?.uid])
+                poll.displayInFeed = true
+                pollRef.setData(poll.toDictionary())
             }
         }
-        
+    }
     
-        
-        }
     @IBAction func topImageTapped(_ sender: UITapGestureRecognizer) {
         displayImagePicker()
         
@@ -114,8 +113,18 @@ class AddPollViewController: UIViewController {
     }
     
     @IBAction func cancelButtonPressed(_ sender: UIBarButtonItem) {
-        self.presentingViewController?.dismiss(animated: true, completion: nil)
-        
+        displayAlert(title: "Why?", message: "Why are you leaving me?", completion: {
+            self.presentingViewController?.dismiss(animated: true, completion: nil)
+        })
+    }
+    
+    func displayAlert(title: String, message: String, completion: @escaping () -> Void) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: { _ in
+            completion()
+        })
+        alertController.addAction(okAction)
+        self.present(alertController, animated: true, completion: nil)
     }
     
     // MARK: Private Functions
